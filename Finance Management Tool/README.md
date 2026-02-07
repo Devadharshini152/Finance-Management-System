@@ -17,7 +17,7 @@ A secure RESTful API that handles business logic, authentication, and data persi
 A dedicated microservice responsible for transaction categorization, predictive analytics, and financial health scoring.
 This separation of concerns allows each layer to scale independently and simplifies future enhancements.
 
-**Technology Stack
+Technology Stack
 **Frontend**
 
 React (Vite) – Fast and modern frontend framework
