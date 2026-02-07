@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-surface: var(--bg-surface);
+  --color-text-main: var(--text-main);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-hover: var(--accent-hover);
+  --color-border-color: var(--border-color);
+}
+
+:root {
+  /* Light Theme */
+  --bg-primary: #f8fafc;   /* Slate 50 */
+  --bg-surface: #ffffff;   /* White */
+  --text-main: #0f172a;    /* Slate 900 */
+  --text-secondary: #64748b; /* Slate 500 */
+  --accent-primary: #4f46e5; /* Indigo 600 */
+  --accent-hover: #4338ca;   /* Indigo 700 */
+  --border-color: #e2e8f0;   /* Slate 200 */
+
+  color-scheme: light;
+}
+
+.dark {
+  /* Dark Theme */
+  --bg-primary: #0f172a;   /* Slate 900 */
+  --bg-surface: #1e293b;   /* Slate 800 */
+  --text-main: #f1f5f9;    /* Slate 100 */
+  --text-secondary: #cbd5e1; /* Slate 300 */
+  --accent-primary: #6366f1; /* Indigo 500 */
+  --accent-hover: #818cf8;   /* Indigo 400 */
+  --border-color: #334155;   /* Slate 700 */
+
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-bg-primary text-text-main transition-colors duration-300;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Common Utility Classes */
+.card {
+  @apply bg-bg-surface rounded-xl shadow-sm border border-border-color p-6 transition-all duration-300 hover:shadow-md;
+}
+
+.btn-primary {
+  @apply bg-accent-primary text-white font-semibold py-2 px-4 rounded-lg shadow-sm hover:bg-accent-hover transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2;
+}
+
+.input-field {
+  @apply w-full px-4 py-2 rounded-lg border border-border-color bg-bg-surface text-text-main focus:outline-none focus:ring-2 focus:ring-accent-primary focus:border-transparent transition-all duration-200 placeholder-text-secondary;
+}
